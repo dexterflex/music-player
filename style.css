@@ -1,0 +1,262 @@
+/* Importing font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Vast+Shadow&display=swap');
+
+/* Generic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    /* Changed from 'scroll' to 'hidden' */
+    outline: none;
+    font-family: Arial, Helvetica, sans-serif;
+    /* color: white; */
+}
+
+button {
+    background-color: #fff;
+    outline: none;
+    border: 1px solid white;
+    transition: all .3s ease-in-out;
+    transform: scale(1);
+}
+
+button:active,
+button:hover {
+    transform: scale(.9);
+    cursor: pointer;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+body,
+html {
+    height: 100%;
+    /* Changed from 199% to 100% */
+    width: 100%;
+}
+
+body {
+    transition: all .3s ease-in-out;
+    padding: 20px;
+    background-image: url('./pexels-photo-296559.jpeg');
+    background-size: cover;
+    /* Changed from '100%' to 'cover' */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Container heading */
+#container-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+#container-head h1 {
+    font-family: "Vast Shadow", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Search */
+#search>* {
+    padding: 5px 20px;
+    font-size: 1.1em;
+    border-radius: 20px;
+    margin: 0 5px;
+}
+
+#search input {
+    width: 400px;
+}
+
+/* Toggle switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+}
+
+/* Slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    transform: translateX(26px);
+}
+
+.night-mode {
+    background-image: url(./pexels-photo-355465.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+}
+
+/* Container body */
+#container-body {
+    display: flex;
+    gap: 20px;
+}
+
+#container-body>div {
+    padding: 20px;
+    flex: 1;
+    border: 1px solid white;
+    height: 80vh;
+    backdrop-filter: blur(10px);
+}
+
+/* All songs section */
+#all-songs-head {
+    margin-bottom: 20px;
+}
+
+#all-songs-head label {
+    margin-right: 20px;
+}
+
+#all-songs-head select {
+    width: 40%;
+}
+
+#all-songs-body h2 {
+    margin-bottom: 20px;
+}
+
+/* Song */
+.song {
+    padding: 5px;
+    width: 100%;
+    margin-bottom: 5px;
+    background-color: #ccc;
+}
+
+.song:hover {
+    background-color: #888787;
+    cursor: pointer;
+}
+
+/* Song card section */
+#song-card {
+    text-align: center;
+}
+
+#song-card-head img {
+    width: 411.34px;
+    height: 411.34px;
+    display: flex;
+    align-self: center;
+    object-fit: contain;
+    border: 2px solid white;
+    border-radius: 12px;
+}
+
+#singer {
+    color: gray;
+    font-size: .8em;
+}
+
+audio {
+    width: 100%;
+    height: 30px;
+    margin-bottom: 10px;
+    position: relative;
+    top: -30px;
+}
+
+#song-card-body {
+    margin-top: 20px;
+}
+
+#buttons button {
+    padding: .5em 1.5em;
+}
+
+/* Playlist section */
+#playlist-head {
+    margin-bottom: 20px;
+}
+
+#playlist input {
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 10px 20px;
+}
+
+#playlist button {
+    width: 100%;
+    padding: 10px;
+}
+
+#current-playlist {
+    margin-bottom: 20px;
+}
+
+/* Not found message */
+.notFound {
+    padding: 5px 15px;
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    left: 50%;
+    bottom: -20%;
+    transform: translate(-50%);
+    background-color: red;
+    border: 2px solid white;
+    color: white;
+    transition: all .4s ease-in-out;
+    border-radius: 10px;
+}
+
+.notFoundSecond {
+    bottom: 9%;
+}

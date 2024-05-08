@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/d19d8ed287.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Container for the entire page -->
+    <div class="container">
+        <!-- Container head (contains logo, search, and mode toggle button) -->
+        <div id="container-head">
+            <h1>Music Player</h1> <!-- Logo -->
+            <!-- Search form -->
+            <form id="search">
+                <select id="categories">
+                    <option value="song">Song</option>
+                    <option value="playlist">Playlist</option>
+                </select>
+                <input type="text" id="search-bar">
+                <button>Search</button>
+            </form>
+            <!-- Mode toggle button -->
+            <label class="switch">
+                <input type="checkbox" id="toggle">
+                <span class="slider"></span>
+            </label>
+        </div>
+
+        <!-- Container body -->
+        <div id="container-body">
+            <!-- All songs section -->
+            <div id="all-songs">
+                <!-- All songs head (filter by genre) -->
+                <div id="all-songs-head">
+                    <label for="Genre">Filter by Genre:</label>
+                    <select id="Genre">
+                        <option value="All">All</option>
+                        <option value="Rock">Rock</option>
+                        <option value="Metal">Metal</option>
+                        <option value="EDM">EDM</option>
+                        <option value="Classic">Classic</option>
+                    </select>
+                </div>
+                <!-- All songs body (displaying songs) -->
+                <div id="all-songs-body">
+                    <h2>All Songs</h2>
+                    <div id="songs"></div>
+                </div>
+            </div>
+
+            <!-- Song card section -->
+            <div id="song-card">
+                <div id="song-card-head">
+                    <img src="" alt="NOT FOUND">
+                    <audio controls autoplay>
+                        <source src="" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <h3 id="title"></h3>
+                    <p id="singer"></p>
+                </div>
+                <div id="song-card-body">
+                    <div id="buttons">
+                        <button id="prev">PREV</button>
+                        <button id="add-playlist">ADD TO FAVORITE</button>
+                        <button id="next">NEXT</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Playlist section -->
+            <div id="playlist">
+                <!-- Playlist head (form to create playlist) -->
+                <form id="playlist-head">
+                    <input id="playlist-create" type="text">
+                    <br>
+                    <button>Create Playlist</button>
+                </form>
+                <!-- Playlist body (current and all playlists) -->
+                <div id="playlist-body">
+                    <h2 id="current-playlist">Current Playlist</h2>
+                    <div id="current-playlist-added" class="mt-20 mb-20"></div> <!-- Songs in current playlist -->
+                    <h2 id="all-playlist">All Playlist</h2>
+                    <div id="all-playlist-added" class="mt-20"></div> <!-- All playlists -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Not found message -->
+    <div class="notFound">
+        <i class="fa-solid fa-x"></i>
+        <p>Not Found</p>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
